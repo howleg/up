@@ -14,27 +14,35 @@ using System.Collections;
 using System.IO;
 using System.Web.Configuration;
 
+
 public class ImageHandler  : IHttpHandler
 {
-  private static String myDbConString = WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+    private static String myDbConString = WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
     static string connectionstring = myDbConString;
 
     public void ProcessRequest (HttpContext context)
     {
+        if(String.IsNullOrEmpty(context.Request.QueryString["UserId"]))
+            HttpContext.Current.Response.Redirect("~/Default.aspx");
+
         //gets the string from 
         String UserId = context.Request.QueryString[0];
-       
+        
+        /*
         Guid userKey = new Guid(UserId);
         MembershipUser mu = Membership.GetUser(userKey);
 
-        string userName = mu.UserName;
-        student22 currentStudent = new student22(userName);
         
+        string userName = mu.UserName;
+        String studentID = userKey.ToString();
+        */
+        student22 currentStudent = new student22(UserId,0);
+
         String image = currentStudent.getProfilePic();
         System.Diagnostics.Debug.WriteLine("image is = " + image);
 
-        
+
         if (!(String.IsNullOrEmpty(image)))
         {
             System.Diagnostics.Debug.WriteLine("UserId is = " + UserId);
@@ -56,7 +64,7 @@ public class ImageHandler  : IHttpHandler
             con.Close();
         }
 
-         context.Response.End();
+        context.Response.End();
     }
     public bool IsReusable
     {
