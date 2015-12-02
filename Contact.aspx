@@ -21,14 +21,15 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+       
+ <div class="col-md-4">
             <div class="well">
-                <img class="img-circle center-block" src="Images/john.jpg" alt="Generic placeholder image" width="140" height="140">
-                <h2 class="text-center">John Evans</h2>
-                <h4 class="text-center">&nbsp;Senior at USC Upstate</h4>
-                <p class="text-center">major: Computer information Systems</p>
-                <p class="text-center">Hobbie: Basketball</p>
-                <p class="text-center"><a href="mailto:Evansjc2@email.uscupstate.edu">Evansjc2@email.uscupstate.edu</a></p>
+                <img class="img-circle center-block" src="Images/trey.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2 class="text-center">Trey Howle</h2>
+                <h4 class="text-center">Senior at USC Upstate</h4>
+                <p class="text-center">major: Computer Information Systems</p>
+                <p class="text-center">Hobbie: Flying airplanes</p>
+                <p class="text-center"><a href="mailto:howleg@email.uscupstate.edu">howleg@email.uscupstate.edu</a></p>
             </div>
         </div>
 
@@ -43,27 +44,9 @@
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="well">
-                <img class="img-circle center-block" src="Images/trey.jpg" alt="Generic placeholder image" width="140" height="140">
-                <h2 class="text-center">Trey Howle</h2>
-                <h4 class="text-center">Senior at USC Upstate</h4>
-                <p class="text-center">major: Computer Information Systems</p>
-                <p class="text-center">Hobbie: Flying airplanes</p>
-                <p class="text-center"><a href="mailto:howleg@email.uscupstate.edu">howleg@email.uscupstate.edu</a></p>
-            </div>
-        </div>
+       
 
-        <div class="col-md-6">
-            <div class="well">
-                <img class="img-circle center-block" src="Images/coreypic.jpg" alt="Generic placeholder image" width="140" height="140">
-                <h2 class="text-center">Corey Simpson</h2>
-                <h4 class="text-center">Senior at USC Upstate</h4>
-                <p class="text-center">major: Computer Science</p>
-                <p class="text-center">Hobbie: Archery</p>
-                <p class="text-center"><a href="mailto:csimpson@email.uscupstate.edu">csimpson@email.uscupstate.edu</a></p>
-            </div>
-        </div>
+
         <div class="hidden">
         <p>
             <span class="label">Game if your bored</span>
