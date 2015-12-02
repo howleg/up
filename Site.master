@@ -4,7 +4,7 @@
 <html lang="en">
 <head id="Head1" runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %>- Course Hunter</title>
+    <title><%: Page.Title %> UP </title>
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -63,17 +63,9 @@
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <LoggedInTemplate>
                                 <li><a runat="server" ref="~/Profile.aspx">Profile</a></li>
+                                <li><a runat="server" href="~/friends.aspx">Friends</a></li>
                                 <li><a id="A1" runat="server" href="~/inbox.aspx">Messages <span class="badge"><%=messageCount%></span></a></li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a runat="server" href="~/Profile.aspx">Profile</a></li>
-                                        <li class="divider"></li>
-                                        <li><a runat="server" href="~/searchUsers.aspx">Search Users</a></li>
-                                        <li><a id="MessageLink" runat="server" href="~/inbox.aspx">Messages <span class="badge"><%=messageCount%></span></a></li>
-                                        <li><a runat="server" href="~/friends.aspx">Friends</a></li>
-                                    </ul>
-                                </li>
+                                <li><a runat="server" href="~/searchUsers.aspx">Search Users</a></li>
                                 <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
                             </LoggedInTemplate>
                         </asp:LoginView>
@@ -105,7 +97,7 @@
             <div class="container">
                 <div class="well"></div>
                 <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-                <asp:ContentPlaceHolder runat="server" ID="MainContent" ></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
             </div>
         </div>
         <footer class="navbar-default navbar-fixed-bottom">

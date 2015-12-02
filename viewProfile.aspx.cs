@@ -54,6 +54,9 @@ public partial class viewProfile : System.Web.UI.Page
         {
             name = Session["name"].ToString();
         }
+        else
+        Response.Redirect("~/Default");
+
         System.Diagnostics.Debug.WriteLine("userName is = " + name);
 
         visitedUserName = name;
@@ -75,7 +78,7 @@ public partial class viewProfile : System.Web.UI.Page
             btnAddFriend.Visible = true;
         }
 
-        Image1.ImageUrl = "ImageHandler.ashx? UserId =" + visitedUserId;
+        Image1.ImageUrl = "ImageHandler.ashx?UserId=" + visitedUserId;
         //get information about the currently logged in student
         studentName = visitedStudent.getActualName();
         majorName = visitedStudent.getMajor();

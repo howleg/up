@@ -69,7 +69,7 @@ public partial class profile : System.Web.UI.Page
             //set labels in front end
             studentNameLabel.Text = studentName;
             usernameLabel.Text = currentUserName;
-            majorNameLabel.Text = majorName;
+
 
             if (!IsPostBack)   //if this is the first time the page is loading      
             aboutMeBox.Text = AboutYourselve;
@@ -85,13 +85,7 @@ public partial class profile : System.Web.UI.Page
 
                 majorsList = majorsObject.getMajorsList();
 
-                majorsDropDown.Items.Clear();
-                majorsDropDown.Items.Insert(0, new ListItem("Select Major", ""));
 
-                foreach (String theMajorName in majorsList)
-                {
-                    majorsDropDown.Items.Add(theMajorName);
-                }
 
                 
 
@@ -156,21 +150,20 @@ public partial class profile : System.Web.UI.Page
         upload2();
 
         String newName = actualNameBox.Text;
-        String newSelectedMajor = majorsDropDown.SelectedItem.Value;
+       
         String aboutMe = aboutMeBox.Text;
 
-        currentStudent.setStudentAttributes(newName, newSelectedMajor, aboutMe);    
+ 
 
         studentNameLabel.Text = currentStudent.getActualName();
 
-        majorNameLabel.Text = currentStudent.getMajor();
+
 
         aboutMeBox.Text = currentStudent.getAboutMe();
 
 
         //reset boxes and dropdown menu
         actualNameBox.Text= string.Empty;
-        majorsDropDown.ClearSelection();
 
 
         //Response.Redirect(Request.RawUrl);

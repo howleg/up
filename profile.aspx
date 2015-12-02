@@ -21,14 +21,11 @@
             </div>
 
             <div class="col-md-4">
-                <h2><u>Username</u></h2>
+                <h2>Username</h2>
                 <asp:Label ID="usernameLabel" runat="server" Text="username" Font-Size="Large"></asp:Label>
                 <h2><u>Full Name</u></h2>
                 <asp:Label ID="studentNameLabel" runat="server" Text="name" Font-Size="Large"></asp:Label>
                 <asp:TextBox ID="actualNameBox" runat="server" Width="290px" Text=""></asp:TextBox>
-                <h2><u>Major</u></h2>
-                <asp:Label ID="majorNameLabel" runat="server" Text="major" Font-Size="Large"></asp:Label>
-                <asp:DropDownList ID="majorsDropDown" runat="server"></asp:DropDownList>
             </div>
 
             <div class="row">
@@ -44,13 +41,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
     <asp:Button class="btn btn-default" ID="btnUpdate" Text="Update profile" OnClick="Update_Click" runat="server"></asp:Button>
 
 
