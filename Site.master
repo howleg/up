@@ -15,7 +15,7 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   <%-- <script>
+    <%-- <script>
         document.getElementById('ButtonSearch').onclick = function () {
             var searchText = document.getElementById('NavbarSearchTextBox').value;
         }
@@ -60,29 +60,21 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="http://publications.uscupstate.edu/Admissions/1415_Academic_Catalog/">Catalog</a></li>
-                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <LoggedInTemplate>
+                                <li><a runat="server" ref="~/Profile.aspx">Profile</a></li>
+                                <li><a id="A1" runat="server" href="~/inbox.aspx">Messages <span class="badge"><%=messageCount%></span></a></li>
                                 <li>
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a runat="server" href="~/Profile.aspx">Profile</a></li>
-                                        <li><a runat="server" href="~/Progress.aspx">Progress</a></li>
-                                        <li><a runat="server" href="~/AddRemoveCourse.aspx">Add/Remove Course</a></li>
-                                        <li><a runat="server" href="~/Results.aspx">Results</a></li>
-                                        <li class="divider">  </li>
-                                        <li><a runat="server" href="~/RateMyCourse.aspx">Rate My Course</a></li>
+                                        <li class="divider"></li>
                                         <li><a runat="server" href="~/searchUsers.aspx">Search Users</a></li>
-                                        <li><a id="MessageLink" runat="server" href="~/inbox">Messages <span class="badge"><%=messageCount%></span></a></li>
+                                        <li><a id="MessageLink" runat="server" href="~/inbox.aspx">Messages <span class="badge"><%=messageCount%></span></a></li>
                                         <li><a runat="server" href="~/friends.aspx">Friends</a></li>
-                                        
-                                        
-                                        
-                                        
-                                        
                                     </ul>
                                 </li>
+                                <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
                             </LoggedInTemplate>
                         </asp:LoginView>
                     </ul>
@@ -103,7 +95,7 @@
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
                                 </li>
                             </ul>
-                            
+
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </div>
