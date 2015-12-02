@@ -68,6 +68,9 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a runat="server" href="~/Profile.aspx">Profile</a></li>
+                                        <li><a runat="server" href="~/Progress.aspx">Progress</a></li>
+                                        <li><a runat="server" href="~/AddRemoveCourse.aspx">Add/Remove Course</a></li>
+                                        <li><a runat="server" href="~/Results.aspx">Results</a></li>
                                         <li class="divider">  </li>
                                         <li><a runat="server" href="~/RateMyCourse.aspx">Rate My Course</a></li>
                                         <li><a runat="server" href="~/searchUsers.aspx">Search Users</a></li>
