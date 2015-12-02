@@ -1,0 +1,17 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is behind 'origin/master' by 3 commits, and can be fast-forwarded.
+#   (use "git pull" to update your local branch)
+#
+# Changes to be committed:
+#	modified:   Account/Register.aspx
+#	modified:   Account/Register.aspx.cs
+#	modified:   AddRemoveCourse.aspx
+#	modified:   AddRemoveCourse.aspx.cs
+#	modified:   Default.aspx.cs
+#	modified:   Progress.aspx.cs
+#	modified:   Web.config
+#
+
