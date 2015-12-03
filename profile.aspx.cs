@@ -60,7 +60,7 @@ public partial class profile : System.Web.UI.Page
 
 
         //get information about the currently logged in student
-        Image1.ImageUrl = "ImageHandler.ashx? UserId =" + UserId;
+        Image1.ImageUrl = "ImageHandler.ashx?UserId=" + UserId;
         studentName = currentStudent.getActualName();
         majorName = currentStudent.getMajor();
         AboutYourselve = currentStudent.getAboutMe();
