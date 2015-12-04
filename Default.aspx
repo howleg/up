@@ -41,6 +41,7 @@
             </div>
             <div class="col-lg-6">
                 <%--<img class="img-responsive" src="Images/image2.jpg" />--%>
+                <%--tst--%>
                 <img class="img-responsive" src="Images/test.png" />
 
             </div>
