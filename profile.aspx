@@ -26,6 +26,9 @@
                 <h2><u>Full Name</u></h2>
                 <asp:Label ID="studentNameLabel" runat="server" Text="name" Font-Size="Large"></asp:Label>
                 <asp:TextBox ID="actualNameBox" runat="server" Width="290px" Text=""></asp:TextBox>
+                <h2><u>Major</u></h2>
+                <asp:Label ID="majorNameLabel" runat="server" Text="major" Font-Size="Large"></asp:Label>
+                <asp:DropDownList ID="majorsDropDown" runat="server"></asp:DropDownList>
             </div>
 
             <div class="row">
