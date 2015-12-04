@@ -62,7 +62,7 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <LoggedInTemplate>
-                                <li><a runat="server" ref="~/Profile.aspx">Profile</a></li>
+                                <li><a runat="server" href="~/Profile.aspx">Profile</a></li>
                                 <li><a runat="server" href="~/friends.aspx">Friends</a></li>
                                 <li><a id="A1" runat="server" href="~/inbox.aspx">Messages <span class="badge"><%=messageCount%></span></a></li>
                                 <li><a runat="server" href="~/searchUsers.aspx">Search Users</a></li>

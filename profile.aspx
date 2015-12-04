@@ -15,17 +15,20 @@
                 <h3><u>Select Profile Image</u></h3>
                 <asp:FileUpload ID="FileUpload1" runat="server" />
                 <br>
-                <asp:Image ID="Image1" class="img-rounded" runat="server" ImageUrl='<%# "ImageHandler.ashx?UserId=" + Eval("UserId") %>' Height="150px" Width="150px" />
+                <asp:Image ID="Image1" class="img-circle" runat="server" ImageUrl='<%# "ImageHandler.ashx?UserId=" + Eval("UserId") %>' Height="150px" Width="150px" />
             </div>
             <div class="col-md-4">
             </div>
 
             <div class="col-md-4">
-                <h2>Username</h2>
+                <h2><u>Username</u></h2>
                 <asp:Label ID="usernameLabel" runat="server" Text="username" Font-Size="Large"></asp:Label>
                 <h2><u>Full Name</u></h2>
                 <asp:Label ID="studentNameLabel" runat="server" Text="name" Font-Size="Large"></asp:Label>
                 <asp:TextBox ID="actualNameBox" runat="server" Width="290px" Text=""></asp:TextBox>
+                <h2><u>Major</u></h2>
+                <asp:Label ID="majorNameLabel" runat="server" Text="major" Font-Size="Large"></asp:Label>
+                <asp:DropDownList ID="majorsDropDown" runat="server"></asp:DropDownList>
             </div>
 
             <div class="row">

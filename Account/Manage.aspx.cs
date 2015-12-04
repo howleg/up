@@ -44,7 +44,7 @@ public partial class Account_Manage : System.Web.UI.Page
                 successMessage.Visible = !String.IsNullOrEmpty(SuccessMessage);
             }
         }
-        
+
     }
 
     protected void setPassword_Click(object sender, EventArgs e)
@@ -58,14 +58,14 @@ public partial class Account_Manage : System.Web.UI.Page
             }
             else
             {
-                
+
                 ModelState.AddModelError("NewPassword", result.ErrorMessage);
-                
+
             }
         }
     }
 
-    
+
     public IEnumerable<OpenAuthAccountData> GetExternalLogins()
     {
         var accounts = OpenAuth.GetAccountsForUser(User.Identity.Name);
@@ -80,7 +80,7 @@ public partial class Account_Manage : System.Web.UI.Page
             : String.Empty;
         Response.Redirect("~/Account/Manage" + m);
     }
-    
+
 
     protected static string ConvertToDisplayDateTime(DateTime? utcDateTime)
     {

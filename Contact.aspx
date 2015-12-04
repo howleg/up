@@ -16,7 +16,7 @@
                 <h2 class="text-center">Reid Mewborne</h2>
                 <h4 class="text-center">Senior at USC Upstate</h4>
                 <p class="text-center">major: Computer information Systems</p>
-                <p class="text-center">Hobbie: Building quadcopters</p>
+                <p class="text-center">Hobbie: Building multi-rotor</p>
                 <p class="text-center"><a href="mailto:mewborne@email.uscupstate.edu">mewborne@email.uscupstate.edu</a></p>
             </div>
         </div>
