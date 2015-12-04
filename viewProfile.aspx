@@ -17,6 +17,8 @@
             </div>
 
             <div class="text-center">
+                <asp:Button ID="btnFriends" runat="server" Text=@viewProfile.name CssClass="btn btn-primary" />
+                <asp:Button ID="btnMutalFriends" runat="server" Text="MutualFriends" cssclass="btn btn-info" />
                 <asp:Button ID="btnSendMessage" Text="Message" OnClick="Message_Click" runat="server" CssClass="btn btn-success"></asp:Button>
                 <asp:Button ID="btnAddFriend" Text="Add Friend" OnClick="addFriend_Click" runat="server" CssClass="btn btn-primary"></asp:Button>
             </div>
@@ -31,8 +33,10 @@
                 <h3>Major:</h3>
                 <asp:Label ID="majorNameLabel" runat="server" Text="major"  Font-Size="Large"></asp:Label>
                 <h3>Self-Summary:</h3>
-                <asp:TextBox ID="summaryLabelBox" runat="server" Text="about you"
-                    TextMode="MultiLine" ReadOnly="True" ></asp:TextBox>
+                
+
+                <asp:Label ID="summaryLabel" runat="server" Text="something"></asp:Label>
+
 
             </div>
         </div>

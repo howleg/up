@@ -4,7 +4,7 @@
 <html lang="en">
 <head id="Head1" runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %>- Course Hunter</title>
+    <title><%: Page.Title %> UP </title>
     <asp:PlaceHolder ID="PlaceHolder1" runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -15,7 +15,7 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-   <%-- <script>
+    <%-- <script>
         document.getElementById('ButtonSearch').onclick = function () {
             var searchText = document.getElementById('NavbarSearchTextBox').value;
         }
@@ -44,7 +44,7 @@
                 <%--Site scripts--%>
             </Scripts>
         </asp:ScriptManager>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -54,35 +54,19 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" runat="server" href="~/">
-                        <img src="../Images/CH_Logo_Howle.png" height="35" width="250">
+                        <img src="../Images/521_Bigger.png" height="35" width="35">
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="http://publications.uscupstate.edu/Admissions/1415_Academic_Catalog/">Catalog</a></li>
-                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <LoggedInTemplate>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a runat="server" href="~/Profile.aspx">Profile</a></li>
-                                        <li><a runat="server" href="~/Progress.aspx">Progress</a></li>
-                                        <li><a runat="server" href="~/AddRemoveCourse.aspx">Add/Remove Course</a></li>
-                                        <li><a runat="server" href="~/Results.aspx">Results</a></li>
-                                        <li class="divider">  </li>
-                                        <li><a runat="server" href="~/RateMyCourse.aspx">Rate My Course</a></li>
-                                        <li><a runat="server" href="~/searchUsers.aspx">Search Users</a></li>
-                                        <li><a id="MessageLink" runat="server" href="~/inbox">Messages <span class="badge"><%=messageCount%></span></a></li>
-                                        <li><a runat="server" href="~/friends.aspx">Friends</a></li>
-                                        
-                                        
-                                        
-                                        
-                                        
-                                    </ul>
-                                </li>
+                                <li><a runat="server" href="~/Profile.aspx">Profile</a></li>
+                                <li><a runat="server" href="~/friends.aspx">Friends</a></li>
+                                <li><a id="A1" runat="server" href="~/inbox.aspx">Messages <span class="badge"><%=messageCount%></span></a></li>
+                                <li><a runat="server" href="~/searchUsers.aspx">Search Users</a></li>
+                                <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
                             </LoggedInTemplate>
                         </asp:LoginView>
                     </ul>
@@ -103,7 +87,7 @@
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" />
                                 </li>
                             </ul>
-                            
+
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </div>
@@ -113,15 +97,12 @@
             <div class="container">
                 <div class="well"></div>
                 <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-                <div class="well" style="background-color: white; border-color: white"></div>
+                <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
             </div>
         </div>
         <footer class="navbar-default navbar-fixed-bottom">
             <div class="container">
-                <asp:TextBox ID="AdminPassword" runat="server" BackColor="white" BorderStyle="None" MaxLength="9" Width="16px"></asp:TextBox>
-                - Course Hunter
-                <asp:Button ID="Button1" runat="server" BackColor="White" BorderStyle="None" Font-Size="Small" Height="18px" OnClick="Button1_Click" Text="V2" Width="26px" />
+                Up
             </div>
         </footer>
     </form>

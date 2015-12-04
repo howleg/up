@@ -12,29 +12,39 @@
 
         <div class="row">
             <div class="col-md-4">
-                <h3><u>Select Profile Image</u></h3>
-                <asp:FileUpload ID="FileUpload1" runat="server" />
-                <br>
-                <asp:Image ID="Image1" class="img-rounded" runat="server" ImageUrl='<%# "ImageHandler.ashx?UserId=" + Eval("UserId") %>' Height="150px" Width="150px" />
+                <div class="well">
+                    <h3 class="text-center"><u>Select Profile Image</u></h3>
+
+                    <br>
+                    <asp:Image ID="Image1" class="img-circle center-block" runat="server" ImageUrl='<%# "ImageHandler.ashx?UserId=" + Eval("UserId") %>' Height="150px" Width="150px" />
+                    <br/><br/>
+                    <asp:FileUpload ID="FileUpload1" CssClass="well-sm" runat="server" />
+                </div>
             </div>
             <div class="col-md-4">
             </div>
 
             <div class="col-md-4">
-                <h2><u>Username</u></h2>
-                <asp:Label ID="usernameLabel" runat="server" Text="username" Font-Size="Large"></asp:Label>
-                <h2><u>Full Name</u></h2>
-                <asp:Label ID="studentNameLabel" runat="server" Text="name" Font-Size="Large"></asp:Label>
-                <asp:TextBox ID="actualNameBox" runat="server" Width="290px" Text=""></asp:TextBox>
-                <h2><u>Major</u></h2>
-                <asp:Label ID="majorNameLabel" runat="server" Text="major" Font-Size="Large"></asp:Label>
-                <asp:DropDownList ID="majorsDropDown" runat="server"></asp:DropDownList>
+                <div class="well">
+                    <h2><u>Username</u></h2>
+                    <asp:Label ID="usernameLabel" runat="server" Text="username" CssClass="" Font-Size="Large"></asp:Label>
+                    <h2><u>Full Name</u></h2>
+                    <asp:Label ID="studentNameLabel" runat="server" Text="name" Font-Size="Large"></asp:Label>
+                    <asp:TextBox ID="actualNameBox" runat="server" CssClass="form-control" Text=""></asp:TextBox>
+                    <h2><u>Major</u></h2>
+                    <asp:Label ID="majorNameLabel" runat="server" Text="major" Font-Size="Large"></asp:Label>
+                    <asp:DropDownList ID="majorsDropDown" runat="server" CssClass="form-control"></asp:DropDownList>
+                </div>
             </div>
 
             <div class="row">
-                <div class="col-md-4">
-                    <h2><u>A little about you</u></h2>
-                    <asp:TextBox ID="aboutMeBox" runat="server" Text="something about you" Width="617px" Height="183px" Columns="10" Rows="5" TextMode="MultiLine" MaxLength="300"></asp:TextBox>
+                <div class="col-md-6">
+                    <h2><u>A bout you</u></h2>
+                    <div class="well">
+                        <asp:TextBox ID="aboutMeBox" runat="server" Width="100%" Height="200px" placeholder="something about you" TextMode="MultiLine" MaxLength="300"></asp:TextBox>
+
+                    </div>
+
                 </div>
                 <div class="col-md-4 ">
                 </div>
@@ -44,13 +54,6 @@
 
         </div>
     </div>
-
-
-
-
-
-
-
     <asp:Button class="btn btn-default" ID="btnUpdate" Text="Update profile" OnClick="Update_Click" runat="server"></asp:Button>
 
 
