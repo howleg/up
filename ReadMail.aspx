@@ -7,7 +7,7 @@
 
     <div id="DivMessage" runat="server" visible="true">
         <!--a box to enter a message to send to the User-->
-        <asp:TextBox ID="messageBox" runat="server" CssClass="table" Columns="10" Rows="4" TextMode="MultiLine"></asp:TextBox>
+        <asp:TextBox ID="messageBox"  runat="server" CssClass="form-control" placeholder="Type your message here" Columns="10" Rows="4" TextMode="MultiLine"></asp:TextBox>
          <br />
         <!--a button to send a message to the user whos profile was selected -->
         <asp:Button CssClass="btn btn-primary" ID="btnSend" Text="Reply" OnClick="Send_Click" runat="server"></asp:Button>
