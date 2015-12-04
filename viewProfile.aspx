@@ -17,6 +17,8 @@
             </div>
 
             <div class="text-center">
+                <asp:Button ID="btnFriends" runat="server" Text=@viewProfile.name CssClass="btn btn-primary" />
+                <asp:Button ID="btnMutalFriends" runat="server" Text="MutualFriends" cssclass="btn btn-info" />
                 <asp:Button ID="btnSendMessage" Text="Message" OnClick="Message_Click" runat="server" CssClass="btn btn-success"></asp:Button>
                 <asp:Button ID="btnAddFriend" Text="Add Friend" OnClick="addFriend_Click" runat="server" CssClass="btn btn-primary"></asp:Button>
             </div>

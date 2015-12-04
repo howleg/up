@@ -40,6 +40,7 @@ public partial class viewProfile : System.Web.UI.Page
             Session.Clear();
             Response.Redirect("~/Default");
         }
+        //getting information about currently logged in user
         currentlyLoggedUserName = HttpContext.Current.User.Identity.Name;
         currentlyLoggedUserID = Membership.GetUser(currentlyLoggedUserName).ProviderUserKey.ToString();
 
@@ -48,18 +49,19 @@ public partial class viewProfile : System.Web.UI.Page
             Response.Redirect("~/Default");
         }
 
-        //recieve a username from the seachUsers page 
-         name = "";
+        //recieve a username from another page 
+        visitedUserName = "";
         if (Session["name"] != null)
         {
-            name = Session["name"].ToString();
+            visitedUserName = Session["name"].ToString();
         }
         else
         Response.Redirect("~/Default");
 
-        System.Diagnostics.Debug.WriteLine("userName is = " + name);
+        btnFriends.Text = visitedUserName+" friends";
 
-        visitedUserName = name;
+        //for debugging 
+        System.Diagnostics.Debug.WriteLine("userName is = " + visitedUserName);
 
 
         visitedStudent = new student22(visitedUserName);
