@@ -66,39 +66,39 @@ public partial class profile : System.Web.UI.Page
         AboutYourselve = currentStudent.getAboutMe();
 
 
-        //set labels in front end
-        studentNameLabel.Text = studentName;
-        usernameLabel.Text = currentUserName;
-        majorNameLabel.Text = majorName;
+            //set labels in front end
+            studentNameLabel.Text = studentName;
+            usernameLabel.Text = currentUserName;
+            majorNameLabel.Text = majorName;
 
-        if (!IsPostBack)   //if this is the first time the page is loading      
+            if (!IsPostBack)   //if this is the first time the page is loading      
             aboutMeBox.Text = AboutYourselve;
 
+           
 
 
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        //get all major names in the major table and add them to the drop down menu called majorsDropDown
-        if (!IsPostBack)
-        {
-            majors majorsObject = new majors();
-
-            majorsList = majorsObject.getMajorsList();
-
-            majorsDropDown.Items.Clear();
-            majorsDropDown.Items.Insert(0, new ListItem("Select Major", ""));
-
-            foreach (String theMajorName in majorsList)
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //get all major names in the major table and add them to the drop down menu called majorsDropDown
+            if (!IsPostBack)
             {
-                majorsDropDown.Items.Add(theMajorName);
-            }
+                majors majorsObject=  new majors();
 
+                majorsList = majorsObject.getMajorsList();
 
+                majorsDropDown.Items.Clear();
+                majorsDropDown.Items.Insert(0, new ListItem("Select Major", ""));
+
+                foreach (String theMajorName in majorsList)
+                {
+                    majorsDropDown.Items.Add(theMajorName);
+                }
+
+                
 
         }//end of if (!IsPostBack)
-         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-         //Image.ImageUrl= currentStudent.getProfilePic();
-
+             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //Image.ImageUrl= currentStudent.getProfilePic();
+        
     }
 
     private void upload2()
@@ -138,8 +138,8 @@ public partial class profile : System.Web.UI.Page
                 Console.WriteLine("Can not open connection ! ");
                 con.Close();
             }
-
-
+            
+           
             Label2.Visible = true;
             Label2.Text = "Image uploaded succcesfully";
             if (count == 1)
@@ -159,7 +159,7 @@ public partial class profile : System.Web.UI.Page
         String newSelectedMajor = majorsDropDown.SelectedItem.Value;
         String aboutMe = aboutMeBox.Text;
 
-        currentStudent.setStudentAttributes(newName, newSelectedMajor, aboutMe);
+        currentStudent.setStudentAttributes(newName, newSelectedMajor, aboutMe);    
 
         studentNameLabel.Text = currentStudent.getActualName();
 
@@ -169,7 +169,7 @@ public partial class profile : System.Web.UI.Page
 
 
         //reset boxes and dropdown menu
-        actualNameBox.Text = string.Empty;
+        actualNameBox.Text= string.Empty;
         majorsDropDown.ClearSelection();
 
 
@@ -179,7 +179,7 @@ public partial class profile : System.Web.UI.Page
 
     public void addUser_Click(object sender, EventArgs e)
     {
-
+        
         Console.WriteLine("No rows found.");
     }
 

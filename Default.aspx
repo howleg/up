@@ -4,41 +4,44 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div>
-        <div class="row">
-            <h1 class="text-center">Communication is key.</h1>
-            <div class="col-md-6">
+    <div class="row">
+        <div class="col-md-6">
+
+            <h1 class="bg-success text-center">"Good planning is good for Graduation"</h1>
+            <p class="text-right">--Daniel Dingana(co-founder)</p>
 
 
-
-
-                <div class="list list-group">
-                    <div class="list list-group-item">
-                        <asp:Label ID="lblVerify" runat="server" Text="Label" Visible="False">User Verified</asp:Label>
-                        <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
-                        <asp:Label ID="Label2" runat="server" Text="Label" Visible="False"></asp:Label>
-                        <asp:Label ID="Label3" runat="server" Text="Label" Visible="False"></asp:Label>
-                        <h4>Messaging has a new look.</h4>
-                        Welcome to our site! Here we have means of chatting, frinding, and showing your personality.
-                    </div>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <p>New To Up?</p>
-                            <p>Please Register <a runat="server" href="~/Account/Register.aspx">HERE</a></p>
-                        </AnonymousTemplate>
-
-                        <LoggedInTemplate>
-                            <h3>Common Links</h3>
-                            <ul class="list list-group">
-                                <li class="list list-group-item"><a runat="server" href="~/Profile.aspx">Profile</a></li>
-                                <li class="list list-group-item"><a runat="server" href="~/friends.aspx">Friends</a></li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+            <div class="list list-group">
+                <div class="list list-group-item">
+                    <asp:Label ID="lblVerify" runat="server" Text="Label" Visible="False">User Verified</asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Label" Visible="False"></asp:Label>
+                    <h4>What our web application is trying to accomplish</h4>
+                    This project will be a web application that helps a student keep track of their academic progress  
+            and creates a list of classes a student can choose from and register for that current semester.
+                </div>
+                <div class="list-group-item">
+                    <h4>Benefits of this application</h4>
+                    The benefits of our application will make it easier for a both faculty(advisors specificly) 
+            and students to see what classes are needed to continue toward a particular major.
+             <mark>THIS SOFTWARE SHOULD ONLY BE A GUIDELINE.</mark> This software is just a tool to help. Please speak with
+            your advisor before making any final decisions. 
+                </div>
+                <div class="list-group-item">
+                    <h4>Keep track of your progress</h4>
+                    Very often students try to sign up for classes that require prerequisites that the student does not meet.  
+            The software will inform the student and not show the student those classes. 
+             As a result the software will also help you avoid taking unnecessary classes and increase the chance of graduating on-time.
                 </div>
             </div>
-            <div class="col-lg-6">
-                <img class="img-responsive" src="Images/image2.jpg" />
-            </div>
+
+        </div>
+    
+
+    <div class="col-md-6">
+        <img src="Images/catalog.jpg" alt="Course Catalog" class="img-rounded" style="width: 90%; height: 90%">
+    </div>
         </div>
     </div>
 

@@ -40,7 +40,6 @@ public partial class viewProfile : System.Web.UI.Page
             Session.Clear();
             Response.Redirect("~/Default");
         }
-        //getting information about currently logged in user
         currentlyLoggedUserName = HttpContext.Current.User.Identity.Name;
         currentlyLoggedUserID = Membership.GetUser(currentlyLoggedUserName).ProviderUserKey.ToString();
 
@@ -49,19 +48,18 @@ public partial class viewProfile : System.Web.UI.Page
             Response.Redirect("~/Default");
         }
 
-        //recieve a username from another page 
-        visitedUserName = "";
+        //recieve a username from the seachUsers page 
+         name = "";
         if (Session["name"] != null)
         {
-            visitedUserName = Session["name"].ToString();
+            name = Session["name"].ToString();
         }
         else
         Response.Redirect("~/Default");
 
-        btnFriends.Text = visitedUserName+" friends";
+        System.Diagnostics.Debug.WriteLine("userName is = " + name);
 
-        //for debugging 
-        System.Diagnostics.Debug.WriteLine("userName is = " + visitedUserName);
+        visitedUserName = name;
 
 
         visitedStudent = new student22(visitedUserName);
@@ -91,16 +89,13 @@ public partial class viewProfile : System.Web.UI.Page
         studentNameLabel.Text = studentName;
         usernameLabel.Text = visitedUserName;
         majorNameLabel.Text = majorName;
-        //summaryLabelBox.Text = AboutYourselve;
-
-        summaryLabel.Text = AboutYourselve;
+        summaryLabelBox.Text = AboutYourselve;
 
 
         //make the h3 tag change dynamically when the page is loaded to reflect change in username
         messageh3.InnerText = "Send a message to: " + visitedUserName;
 
         //dynamically change the width if 
-        /*
         int charRows = 0;
         string tbCOntent;
         int chars = 0;
@@ -119,7 +114,6 @@ public partial class viewProfile : System.Web.UI.Page
             summaryLabelBox.Rows = charRows + 1;
             summaryLabelBox.TextMode = TextBoxMode.MultiLine;
         }
-        */
     }
 
     private bool areTheyFriends()

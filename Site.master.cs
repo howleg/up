@@ -85,7 +85,11 @@ public partial class SiteMaster : MasterPage
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-       
+        if (AdminPassword.Text == "zookeeper")
+        {
+            Button1.PostBackUrl = "~/Admin privleges/databaseChanges.aspx";
+        }
+
     }
 
 
