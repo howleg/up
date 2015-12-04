@@ -181,7 +181,7 @@ public partial class viewProfile : System.Web.UI.Page
     public void btnFriends_Click(object sender, EventArgs e)
     {
 
-        Session["visitedUserId"] = visitedUserId;
+        Session["id"] = visitedStudent.getStudent_id();
         Response.Redirect("friends.aspx");
 
     }

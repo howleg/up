@@ -47,12 +47,14 @@ public partial class friends : System.Web.UI.Page
         this.friendIDList = new List<String>();
         friendHld = new friendHandler();
 
-        visitedUserName = "";
-        if (Session["visitedUserId"] != null)
-        {
-            visitedUserId = Session["visitedUserId"].ToString();
-            currentlyLoggedUserID = visitedUserId;
-        }
+        //visitedUserId
+          if (Session["id"] != null)
+          {
+            currentlyLoggedUserID = Session["id"].ToString();
+            
+          }
+
+      
         friendIDList = friendHld.getFriendsList(currentlyLoggedUserID);
 
         foreach (String friendID in friendIDList)
