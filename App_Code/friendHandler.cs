@@ -60,10 +60,7 @@ public class friendHandler
     public List<String> getFriendsList(string user_id)
     {
         
-        storedProcedure myProc = new storedProcedure("getFriendsList");
-        myProc.addParam(new paramter("@user_id", user_id));
-        DataTable table = new DataTable();
-        DataTable friendsTable = myProc.executeReader();
+       DataTable friendsTable = friendDB.getFriendsList(user_id);
 
 
         if (friendsTable.Rows.Count > 0)
@@ -83,5 +80,31 @@ public class friendHandler
         return this.friendIDList;
 
     }
+
+    /*
+    public List<String> mutualFriends(string user_id, string visitedUser_Id)
+    {
+
+        DataTable friendsTable = friendDB.mutualFriends(user_id, visitedUser_Id);
+
+
+        if (friendsTable.Rows.Count > 0)
+        {
+            foreach (DataRow dr in friendsTable.Rows)
+            {
+                String friendID = dr["friend_id"].ToString();
+                this.friendIDList.Add(friendID);
+            }
+        }
+
+        else
+        {
+            Console.WriteLine("No rows found.");
+        }
+
+        return this.friendIDList;
+
+    }
+    */
 
 }

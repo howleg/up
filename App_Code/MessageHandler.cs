@@ -27,8 +27,8 @@ public class MessageHandler
     public MessageHandler()
         {
             messageDb = new MessageDb();
-        currentlyLoggedUserName = HttpContext.Current.User.Identity.Name;
-        currentlyLoggedUserID = Membership.GetUser(currentlyLoggedUserName).ProviderUserKey.ToString();
+            currentlyLoggedUserName = HttpContext.Current.User.Identity.Name;
+            currentlyLoggedUserID = Membership.GetUser(currentlyLoggedUserName).ProviderUserKey.ToString();
     }
 
         public DataTable GetAllMessages(string userID)

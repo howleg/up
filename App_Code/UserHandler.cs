@@ -1,16 +1,28 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 using System.Data;
-using System.Configuration;
+using Microsoft.AspNet.Membership;
+using Microsoft.AspNet.Membership.OpenAuth;
+using System.Web.Security;
+using System.Collections;
+using System.Web.UI.HtmlControls;
 
-
-    public class UserHandler
+public class UserHandler
     {
         UserDb userDb = null;
+     private List<student22> allStudentsList;
 
-        public UserHandler()
+     public UserHandler()
         {
             userDb = new UserDb();
-        }
+        this.allStudentsList = new List<student22>();
+
+         }
 
         public DataTable GetUserList()
         {
@@ -57,5 +69,30 @@ using System.Configuration;
             return string.Empty;
         }
 
-       
+    public List<student22> GetAllStudentsList()
+    {
+
+        DataTable allUserNameTable = userDb.getAllUsernames();
+
+
+        if (allUserNameTable.Rows.Count > 0)
+        {
+            foreach (DataRow dr in allUserNameTable.Rows)
+            {
+                String username = dr["UserName"].ToString();
+                student22 stud = new student22(username);
+                this.allStudentsList.Add(stud);
+            }
+        }
+
+        else
+        {
+            Console.WriteLine("No rows found.");
+        }
+
+        return this.allStudentsList;
+
     }
+
+
+}
