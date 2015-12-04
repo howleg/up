@@ -49,16 +49,16 @@ public partial class viewProfile : System.Web.UI.Page
             Response.Redirect("~/Default");
         }
 
-        //recieve a username from another page 
+        //recieve a username from another page (from 
         visitedUserName = "";
         if (Session["name"] != null)
         {
             visitedUserName = Session["name"].ToString();
         }
         else
-        Response.Redirect("~/Default");
+            Response.Redirect("~/Default");
 
-        btnFriends.Text = visitedUserName+"'s friends";
+        btnFriends.Text = visitedUserName + "'s friends";
 
         //for debugging 
         System.Diagnostics.Debug.WriteLine("userName is = " + visitedUserName);
@@ -177,5 +177,15 @@ public partial class viewProfile : System.Web.UI.Page
         messageBox.Text = string.Empty;
         Response.Redirect(Request.RawUrl);
     }
+
+    public void btnFriends_Click(object sender, EventArgs e)
+    {
+
+        Session["visitedUserId"] = visitedUserId;
+        Response.Redirect("friends.aspx");
+
+    }
+
+
 
 }

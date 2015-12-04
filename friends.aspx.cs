@@ -22,6 +22,9 @@ public partial class friends : System.Web.UI.Page
     friendHandler friendHld;
 
 
+    String visitedUserId;
+    String visitedUserName;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!(HttpContext.Current.User.Identity.IsAuthenticated))
@@ -44,7 +47,12 @@ public partial class friends : System.Web.UI.Page
         this.friendIDList = new List<String>();
         friendHld = new friendHandler();
 
-
+        visitedUserName = "";
+        if (Session["visitedUserId"] != null)
+        {
+            visitedUserId = Session["visitedUserId"].ToString();
+            currentlyLoggedUserID = visitedUserId;
+        }
         friendIDList = friendHld.getFriendsList(currentlyLoggedUserID);
 
         foreach (String friendID in friendIDList)
