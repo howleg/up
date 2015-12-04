@@ -48,13 +48,13 @@ public partial class friends : System.Web.UI.Page
         friendHld = new friendHandler();
 
         //visitedUserId
-          if (Session["id"] != null)
-          {
+        if (Session["id"] != null)
+        {
             currentlyLoggedUserID = Session["id"].ToString();
-            
-          }
 
-      
+        }
+
+
         friendIDList = friendHld.getFriendsList(currentlyLoggedUserID);
 
         foreach (String friendID in friendIDList)
@@ -120,7 +120,6 @@ public partial class friends : System.Web.UI.Page
 
             //add all rows to table
             myTable.Controls.Add(row);
-
 
         }
         friendsListHolder.Controls.Add(myTable);

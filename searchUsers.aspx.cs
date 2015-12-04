@@ -14,10 +14,10 @@ using System.Web.UI.HtmlControls;
 
 public partial class searchUsers : System.Web.UI.Page
 {
-    String usernameInSearchBox="";
+    String usernameInSearchBox = "";
     String userId = "";
     protected List<student22> studentList;
-    protected static string tempUserID="";
+    protected static string tempUserID = "";
 
     private static bool areFriends;
     friendHandler friendHld;
@@ -71,9 +71,9 @@ public partial class searchUsers : System.Web.UI.Page
     void btn_Click(object sender, EventArgs e)
     {
 
-        string name= ((sender) as Button).ID;
+        string name = ((sender) as Button).ID;
         //send this username to the viewProfile page 
-       // string name = usernameInSearchBox;
+        // string name = usernameInSearchBox;
         Session["name"] = name;
         Response.Redirect("viewProfile.aspx");
     }
@@ -106,51 +106,51 @@ public partial class searchUsers : System.Web.UI.Page
         HtmlTable myTable = new HtmlTable();
         myTable.Attributes["class"] = "table";
         foreach (var student in studentList)
-         {
+        {
+
+
+
+            HtmlTableRow row = new HtmlTableRow();
+            row.Attributes["class"] = "";
+
+            HtmlTableCell cell1 = new HtmlTableCell();
+            cell1.Attributes["class"] = "";
+
+
+
+            var userNameLabel = new Label();
+            userNameLabel.Text = student.getUsername();
+            cell1.Controls.Add(userNameLabel);
+            //cell1.InnerText = student.getUsername();
+            row.Controls.Add(cell1);
+
+            HtmlTableCell cell2 = new HtmlTableCell();
+            Image img = new Image();
+            img.Attributes["class"] = "media-object";
+            img.Height = 100;
+            img.Width = 100;
+            img.AlternateText = "No image on file";
+            img.ImageUrl = "ImageHandler.ashx?UserId=" + student.getStudent_id();
+            //add the btn to cell3
+            cell2.Controls.Add(img);
+            //add cell3 to the row
+            row.Controls.Add(cell2);
+
+            HtmlTableCell cell3 = new HtmlTableCell();
+            //create button
+            Button btn = new Button();
+            btn.Attributes["class"] = "btn btn-success";
+            btn.Text = "view User Profile";
+            btn.ID = student.getUsername();
+            //event hadler for button
+            btn.Click += new EventHandler(btn_Click);
+            //add the btn to cell3
+            cell3.Controls.Add(btn);
+            //add cell3 to the row
+            row.Controls.Add(cell3);
 
             if (!(student.getStudent_id().Equals(currentlyLoggedUserID)))
             {
-
-
-                HtmlTableRow row = new HtmlTableRow();
-                row.Attributes["class"] = "";
-
-                HtmlTableCell cell1 = new HtmlTableCell();
-                cell1.Attributes["class"] = "";
-
-
-
-                var userNameLabel = new Label();
-                userNameLabel.Text = student.getUsername();
-                cell1.Controls.Add(userNameLabel);
-                //cell1.InnerText = student.getUsername();
-                row.Controls.Add(cell1);
-
-                HtmlTableCell cell2 = new HtmlTableCell();
-                Image img = new Image();
-                img.Attributes["class"] = "media-object";
-                img.Height = 100;
-                img.Width = 100;
-                img.AlternateText = "No image on file";
-                img.ImageUrl = "ImageHandler.ashx?UserId=" + student.getStudent_id();
-                //add the btn to cell3
-                cell2.Controls.Add(img);
-                //add cell3 to the row
-                row.Controls.Add(cell2);
-
-                HtmlTableCell cell3 = new HtmlTableCell();
-                //create button
-                Button btn = new Button();
-                btn.Attributes["class"] = "btn btn-success";
-                btn.Text = "view User Profile";
-                btn.ID = student.getUsername();
-                //event hadler for button
-                btn.Click += new EventHandler(btn_Click);
-                //add the btn to cell3
-                cell3.Controls.Add(btn);
-                //add cell3 to the row
-                row.Controls.Add(cell3);
-
                 HtmlTableCell cell4 = new HtmlTableCell();
                 //create button
                 Button btnAddFriend = new Button();
@@ -172,10 +172,11 @@ public partial class searchUsers : System.Web.UI.Page
                 //add cell3 to the row
                 row.Controls.Add(cell4);
 
-                //add all rows to table
-                myTable.Controls.Add(row);
-
             }
+            //add all rows to table
+            myTable.Controls.Add(row);
+
+
         }
         PlaceHolder1.Controls.Add(myTable);
     }
@@ -212,9 +213,9 @@ public partial class searchUsers : System.Web.UI.Page
         }
         else
         {
-            userFoundLabel.Text ="Enter a username";
+            userFoundLabel.Text = "Enter a username";
             userFoundLabel.Visible = true;
-           
+
         }
 
 

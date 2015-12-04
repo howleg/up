@@ -58,7 +58,13 @@ public partial class viewProfile : System.Web.UI.Page
         else
             Response.Redirect("~/Default");
 
-        btnFriends.Text = visitedUserName + "'s friends";
+        if (currentlyLoggedUserName.Equals(visitedUserName))
+        {
+            btnFriends.Text = "Your friends";
+            btnMutalFriends.Visible = false;
+        }
+        else
+            btnFriends.Text = visitedUserName + "'s friends";
 
         //for debugging 
         System.Diagnostics.Debug.WriteLine("userName is = " + visitedUserName);

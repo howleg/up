@@ -40,7 +40,7 @@ public partial class profile : System.Web.UI.Page
             Session.Clear();
             Response.Redirect("~/Default.aspx");
         }
-        String currentUserName = HttpContext.Current.User.Identity.Name;
+        currentUserName = HttpContext.Current.User.Identity.Name;
         UserId = Membership.GetUser(currentUserName).ProviderUserKey.ToString();
 
 
@@ -151,7 +151,7 @@ public partial class profile : System.Web.UI.Page
 
 
 
-    public void Update_Click(object sender, EventArgs e)
+    protected void Update_Click(object sender, EventArgs e)
     {
         upload2();
 
@@ -177,11 +177,22 @@ public partial class profile : System.Web.UI.Page
 
     }
 
-    public void addUser_Click(object sender, EventArgs e)
+    protected void addUser_Click(object sender, EventArgs e)
     {
 
         Console.WriteLine("No rows found.");
     }
+
+    protected void viewProfile_Click(object sender, EventArgs e)
+    {
+
+        string name = ((sender) as Button).ID;
+        //send this username to the viewProfile page 
+        // string name = usernameInSearchBox;
+        Session["name"] = currentUserName;
+        Response.Redirect("viewProfile.aspx");
+    }
+
 
 
 }
