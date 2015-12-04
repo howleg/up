@@ -76,7 +76,7 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage.aspx" title="Manage your account">Hello,
+                                <li><a runat="server" href="~/profile" title="Manage your account">Hello,
                                     <asp:LoginName ID="LoginName1" runat="server" CssClass="username" />
                                 </a></li>
                                 <li>
