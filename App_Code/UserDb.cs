@@ -27,4 +27,12 @@ using System.Data.SqlClient;
             return table = myProc.executeReader();
         }
 
+    public DataTable getAllUsernames()
+    {
+        storedProcedure myProc = new storedProcedure("getAllUsernames");
+        DataTable table = new DataTable();
+        return table = myProc.executeReader();
     }
+
+
+}

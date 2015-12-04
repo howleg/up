@@ -75,6 +75,7 @@ public partial class friends : System.Web.UI.Page
         {
             HtmlTableRow row = new HtmlTableRow();
 
+
             HtmlTableCell cell1 = new HtmlTableCell();
             var userNameLabel = new Label();
             userNameLabel.Attributes["class"] = "align-right";

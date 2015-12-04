@@ -56,4 +56,17 @@ public class FriendDB
         myProc.executeNonQueryParam();
     }
 
+    /*
+    public DataTable mutualFriends(string user_id, string visitedUser_Id)
+    {
+
+        storedProcedure myProc = new storedProcedure("mutualFriends");
+        myProc.addParam(new paramter("@user_id", user_id));
+        myProc.addParam(new paramter("@visitedUser_Id", visitedUser_Id));
+        DataTable table = new DataTable();
+
+        return table = myProc.executeReader();
+    }
+    */
+
 }
