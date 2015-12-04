@@ -31,8 +31,10 @@
                 <h3>Major:</h3>
                 <asp:Label ID="majorNameLabel" runat="server" Text="major"  Font-Size="Large"></asp:Label>
                 <h3>Self-Summary:</h3>
-                <asp:TextBox ID="summaryLabelBox" runat="server" Text="about you"
-                    TextMode="MultiLine" ReadOnly="True" ></asp:TextBox>
+                
+
+                <asp:Label ID="summaryLabel" runat="server" Text="something"></asp:Label>
+
 
             </div>
         </div>

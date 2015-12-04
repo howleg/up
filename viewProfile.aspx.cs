@@ -89,13 +89,16 @@ public partial class viewProfile : System.Web.UI.Page
         studentNameLabel.Text = studentName;
         usernameLabel.Text = visitedUserName;
         majorNameLabel.Text = majorName;
-        summaryLabelBox.Text = AboutYourselve;
+        //summaryLabelBox.Text = AboutYourselve;
+
+        summaryLabel.Text = AboutYourselve;
 
 
         //make the h3 tag change dynamically when the page is loaded to reflect change in username
         messageh3.InnerText = "Send a message to: " + visitedUserName;
 
         //dynamically change the width if 
+        /*
         int charRows = 0;
         string tbCOntent;
         int chars = 0;
@@ -114,6 +117,7 @@ public partial class viewProfile : System.Web.UI.Page
             summaryLabelBox.Rows = charRows + 1;
             summaryLabelBox.TextMode = TextBoxMode.MultiLine;
         }
+        */
     }
 
     private bool areTheyFriends()
