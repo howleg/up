@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-md-4">
-                <h2>Username</h2>
+                <h2><u>Username</u></h2>
                 <asp:Label ID="usernameLabel" runat="server" Text="username" Font-Size="Large"></asp:Label>
                 <h2><u>Full Name</u></h2>
                 <asp:Label ID="studentNameLabel" runat="server" Text="name" Font-Size="Large"></asp:Label>
