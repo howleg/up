@@ -16,7 +16,7 @@ public partial class searchUsers : System.Web.UI.Page
 {
     String usernameInSearchBox="";
     String userId = "";
-    protected List<student22> studentList;
+    
     protected static string tempUserID="";
 
     private static bool areFriends;
@@ -43,18 +43,15 @@ public partial class searchUsers : System.Web.UI.Page
             Response.Redirect("~/Default");
         }
 
-        studentList = new List<student22>();
         if (!IsPostBack)
             seachAllUSers.Visible = false;
         userFoundLabel.Visible = false;
         usernameInSearchBox = searchBox.Text;
 
-
-
         friendHld = new friendHandler();
         //check to see if they are friends or not
 
-        createTable();
+      
 
 
     }//end of searchUsers class
@@ -222,6 +219,7 @@ public partial class searchUsers : System.Web.UI.Page
 
     public void allUSers_Click(object sender, EventArgs e)
     {
+        createTable();
         seachAllUSers.Visible = true;
     }
 
