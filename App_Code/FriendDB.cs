@@ -56,7 +56,7 @@ public class FriendDB
         myProc.executeNonQueryParam();
     }
 
-    /*
+
     public DataTable mutualFriends(string user_id, string visitedUser_Id)
     {
 
@@ -67,6 +67,6 @@ public class FriendDB
 
         return table = myProc.executeReader();
     }
-    */
+
 
 }

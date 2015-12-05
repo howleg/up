@@ -15,6 +15,7 @@ using System.Web.Configuration;
 public partial class viewProfile : System.Web.UI.Page
 {
     private static bool areFriends;
+    int numOfMutualFriends;
     friendHandler friendHld;
 
     String currentlyLoggedUserID;
@@ -54,37 +55,36 @@ public partial class viewProfile : System.Web.UI.Page
         if (Session["name"] != null)
         {
             visitedUserName = Session["name"].ToString();
+            visitedStudent = new student22(visitedUserName);
+            visitedUserId = visitedStudent.getStudent_id();
         }
         else
             Response.Redirect("~/Default");
+
+        friendHld = new friendHandler();
 
         if (currentlyLoggedUserName.Equals(visitedUserName))
         {
             btnFriends.Text = "Your friends";
             btnMutalFriends.Visible = false;
+            btnAddFriend.Visible = false;
         }
         else
+        {
             btnFriends.Text = visitedUserName + "'s friends";
+
+            numOfMutualFriends = friendHld.getNumberOfMutualFriends(currentlyLoggedUserID, visitedUserId);
+            btnMutalFriends.Text = "" + numOfMutualFriends + " Mutual friends";
+            //check to see if they are friends or not
+            //btnAddFriend.Text = "Unfriend" if they are;
+            areTheyFriends();
+        }
+
 
         //for debugging 
         System.Diagnostics.Debug.WriteLine("userName is = " + visitedUserName);
 
 
-        visitedStudent = new student22(visitedUserName);
-        visitedUserId = visitedStudent.getStudent_id();
-
-        friendHld = new friendHandler();
-        //check to see if they are friends or not
-        areTheyFriends();
-
-        if (visitedUserId.Equals(currentlyLoggedUserID))
-        {
-            btnAddFriend.Visible = false;
-        }
-        else
-        {
-            btnAddFriend.Visible = true;
-        }
 
         Image1.ImageUrl = "ImageHandler.ashx?UserId=" + visitedUserId;
         //get information about the currently logged in student
@@ -188,6 +188,14 @@ public partial class viewProfile : System.Web.UI.Page
     {
 
         Session["id"] = visitedStudent.getStudent_id();
+        Response.Redirect("friends.aspx");
+
+    }
+
+    public void btnMutualFriends_Click(object sender, EventArgs e)
+    {
+
+        Session["mutualClick"] = visitedStudent.getStudent_id();
         Response.Redirect("friends.aspx");
 
     }

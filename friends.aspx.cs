@@ -54,8 +54,16 @@ public partial class friends : System.Web.UI.Page
 
         }
 
+        //visitedUserId if the mutual frienfs button is clicked
+        if (Session["mutualClick"] != null)
+        {
+            visitedUserId = Session["mutualClick"].ToString();
+            friendIDList = friendHld.mutualFriends(currentlyLoggedUserID, visitedUserId);
+        }
+        else
+            friendIDList = friendHld.getFriendsList(currentlyLoggedUserID);
 
-        friendIDList = friendHld.getFriendsList(currentlyLoggedUserID);
+
 
         foreach (String friendID in friendIDList)
         {
@@ -81,6 +89,7 @@ public partial class friends : System.Web.UI.Page
     {
         HtmlTable myTable = new HtmlTable();
         myTable.Attributes["class"] = "table table-hover";
+
         foreach (var student in ListOFFreinds)
         {
             HtmlTableRow row = new HtmlTableRow();
