@@ -11,6 +11,9 @@ using Microsoft.AspNet.Membership.OpenAuth;
 using System.Web.Security;
 using System.Collections;
 using System.Web.Configuration;
+
+
+/// Author: Daniel Dingana
 /// <summary>
 /// Summary description for majors
 /// </summary>

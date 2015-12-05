@@ -13,6 +13,8 @@ using System.Collections;
 using System.IO;
 using System.Web.Configuration;
 
+/// C# code Author: Daniel Dingana
+/// 
 public partial class profile : System.Web.UI.Page
 {
     protected String UserId;

@@ -10,6 +10,9 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 
+
+/// Author: Daniel Dingana
+/// 
 public partial class ReadMail : System.Web.UI.Page
 {
     protected String currentlyLoggedUserID;

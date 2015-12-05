@@ -12,6 +12,7 @@ using System.Web.Security;
 using System.Collections;
 using System.Web.UI.HtmlControls;
 
+/// Author: Daniel Dingana
 public class UserHandler
     {
         UserDb userDb = null;

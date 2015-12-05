@@ -3,8 +3,8 @@ using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
 
-
-    public class MessageDb
+/// Author: Daniel Dingana
+public class MessageDb
     {
         public MessageDb()
         {

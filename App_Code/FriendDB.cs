@@ -3,7 +3,7 @@ using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
 
-/// <summary>
+/// Author: Daniel Dingana
 /// Summary description for friendDB
 /// </summary>
 public class FriendDB

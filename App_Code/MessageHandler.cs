@@ -12,6 +12,12 @@ using System.Web.Security;
 using System.Collections;
 using System.Web.UI.HtmlControls;
 
+
+/// Author: Daniel Dingana
+/// 
+
+
+
 //MessageHandler connects to the messageDb object which makes the connnection to the database and returns the datatables and datasets
 //of the data in the database when the methods in messageDb are called.
 //The MessageHandler then controls all the methods in messageDb.

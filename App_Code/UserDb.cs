@@ -3,8 +3,10 @@ using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
 
+/// Author: Daniel Dingana
+/// 
 
-    public class UserDb
+public class UserDb
     {
         public UserDb()
         {

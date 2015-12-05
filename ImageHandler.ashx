@@ -14,7 +14,8 @@ using System.Collections;
 using System.IO;
 using System.Web.Configuration;
 
-
+/// Author: Daniel Dingana
+/// 
 public class ImageHandler  : IHttpHandler
 {
     private static String myDbConString = WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;

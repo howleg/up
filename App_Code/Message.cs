@@ -2,7 +2,9 @@ using System;
 using System.Data;
 using System.Configuration;
 
-    public class Message
+
+/// Author: Daniel Dingana
+public class Message
     {
         private int messageId;
         private string senderId;

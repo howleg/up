@@ -12,7 +12,9 @@ using System.Web.Security;
 using System.Collections;
 using System.Web.Configuration;
 
-/// <summary>
+
+/// Author: Daniel Dingana
+/// 
 /// Summary description for friendHandler
 /// </summary>
 public class friendHandler

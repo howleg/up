@@ -12,6 +12,9 @@ using System.Web.Security;
 using System.Collections;
 using System.IO;
 
+/// Author: Daniel Dingana
+/// 
+
 public partial class inbox : System.Web.UI.Page
 {
     protected String UserId;
